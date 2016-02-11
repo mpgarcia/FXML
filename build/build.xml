@@ -22,7 +22,7 @@
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="C:\Users\thekazador\Dropbox\workspace\FXML">
+			<fileset dir="C:\Users\thekazador\git\FXML">
 				<include name="src/**" />
 			</fileset>
 		</copy>

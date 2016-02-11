@@ -63,6 +63,9 @@ public class MyController implements Initializable {
     void onSubmitClick(ActionEvent event) {
     }
 
+	private int view_media_width = 0;
+	private int view_media_height = 0;
+    
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
@@ -120,9 +123,6 @@ public class MyController implements Initializable {
 		       		media_player = new MediaPlayer(media_media);
 		       		media_view.setMediaPlayer(media_player);
 
-		       		int view_media_width = 0;
-		       		int view_media_height = 0;
-		       		
 		       		if (application.Main.stage.getWidth() > 1599 && application.Main.stage.getHeight() > 899) {
 		       			view_media_width = 1600;
 		       			view_media_height = 900;
@@ -242,18 +242,18 @@ public class MyController implements Initializable {
 					if(t.getCode()==KeyCode.ENTER) {
 						if (pause) {
 							try {
-								String UPLOAD_URL = "http://192.168.88.240:8080/servlet/upload-file";
-								int BUFFER_SIZE = 4096;
-						    
+								String UPLOAD_URL = "http://127.0.0.1:8080/servlet/upload-file";
+								int BUFFER_SIZE = 8192;
+
 								media_view.setFitWidth(1920);
 								media_view.setFitHeight(1080);
 								
-								BufferedImage output = new BufferedImage(700, 500, BufferedImage.TYPE_INT_ARGB);
+								BufferedImage output = new BufferedImage(1920, 1080, BufferedImage.TYPE_INT_ARGB);
 								WritableImage snapshot = media_view.snapshot(new SnapshotParameters(), null);
 								BufferedImage image = javafx.embed.swing.SwingFXUtils.fromFXImage(snapshot, output);
 
-								media_view.setFitWidth(700);
-								media_view.setFitHeight(500);
+								media_view.setFitWidth(view_media_width);
+								media_view.setFitHeight(view_media_height);
 								
 								ByteArrayOutputStream os = new ByteArrayOutputStream();
 								ImageIO.write(image, "png", os);
