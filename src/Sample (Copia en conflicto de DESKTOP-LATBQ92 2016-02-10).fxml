@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="media_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
+	<children>
+		<Text fx:id="media_text" fontSmoothingType="LCD" layoutX="24.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camaras" wrappingWidth="332.13671875">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Text>
+		<MediaView fx:id="media_view" fitHeight="500.0" fitWidth="700.0" layoutX="40.0" layoutY="62.0">
+			<mediaPlayer>
+				<MediaPlayer fx:id="media_player">
+					<media>
+						<Media fx:id="media_media" source="http://download.oracle.com/otndocs/products/javafx/oow2010-2.flv" />
+                    </media>
+				</MediaPlayer>
+			</mediaPlayer>
+		</MediaView>
+		<Slider fx:id="media_slider" layoutX="40" layoutY="550.0" prefHeight="14.0" prefWidth="700" />
+		<Button fx:id="media_button" layoutX="700" layoutY="520" mnemonicParsing="false" prefHeight="25.0" prefWidth="80" text="Seleccionar" onAction="#onSubmitClick" />
+	</children>
+</Pane>

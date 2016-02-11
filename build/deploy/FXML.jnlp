@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FXML.jnlp">
+  <information>
+    <title>FXML</title>
+    <vendor>ANSV</vendor>
+    <description>Prueba</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FXML.jar" size="13410" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <jfx:javafx-desc  width="800" height="600" main-class="application.Main"  name="Prueba" />
+  <update check="background"/>
+</jnlp>

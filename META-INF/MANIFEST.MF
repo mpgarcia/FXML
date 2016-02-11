@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Permissions: all-permissions
+JavaFX-Version: 8.0
+Created-By: JavaFX Packager
+Main-Class: application.Main
+Codebase: http://192.168.88.240:8080/test
+Application-Name: Prueba

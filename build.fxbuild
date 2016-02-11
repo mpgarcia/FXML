@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.ide.jdt/1.0" buildDirectory="${project}/build">
+  <deploy embedjnlp="true" height="400" width="600">
+    <application name="FXML Test" mainclass="application.Main" version="0.1" toolkit="fx"/>
+    <info title="Prueba" vendor="ANSV"/>
+  </deploy>
+  <signjar alias="selfsigned" keypass="espina" keystore="C:\Users\thekazador\Desktop\keystore2.jks" storepass="espina321"/>
+  <manifestEntries name="Permissions" value="all-permissions"/>
+</anttasks:AntTask>
